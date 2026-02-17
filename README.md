@@ -142,3 +142,124 @@ Comparator – Sorts products by rating (highest first).
 Exception Handling (try-catch) – Manages runtime stock issues.
 Role-Based Access Control – Different menus for Admin and Customer.
 Menu-Driven System (Switch + Loop) – Console interaction logic.
+
+```
+## Hotel Reservation
+```
+📌 Project Description
+
+The Hotel Reservation System is a console-based Java application that allows users to:
+View available rooms
+Book rooms with date selection
+Apply different discount strategies
+Check-out and process payments
+Cancel bookings with refund calculation
+Handle booking errors using custom exceptions
+
+🔄 Workflow
+
+System loads predefined rooms.
+User selects an option from the main menu.
+User can view room availability.
+During booking:
+User selects room and enters check-in/check-out dates.
+System validates dates.
+Total amount is calculated based on number of nights.
+User selects discount type (Strategy Pattern applied).
+Final amount is computed and booking is confirmed.
+On checkout:
+Payment is processed.
+Room is marked available again.
+On cancellation:
+80% refund is calculated.
+Booking is removed and room becomes available.
+
+🛠 Concepts Used (One Line Explanation)
+
+Class & Object – Room, Booking, and HotelReservationSystem represent system entities.
+Encapsulation – Room and Booking fields are private with controlled access.
+Custom Exceptions – RoomNotAvailableException and InvalidDateException handle errors.
+Strategy Pattern – DiscountStrategy interface allows flexible discount calculation.
+Polymorphism – Different discount classes implement the same interface.
+Java Time API (LocalDate, ChronoUnit) – Used for date validation and night calculation.
+Collections (ConcurrentHashMap) – Thread-safe room storage.
+HashMap – Stores active bookings.
+Synchronization – Prevents multiple bookings of the same room.
+Exception Handling (try-catch) – Ensures safe runtime execution.
+Menu-Driven System (Loop + Switch) – Controls application flow.
+
+```
+
+## TicketBooking Using Miltithread
+```
+📌 Project Description
+
+The Multi-Threaded Ticket Booking System is a console-based Java application that simulates real-time seat booking using multithreading.
+It allows:
+Multiple users to book seats concurrently
+Cancel bookings securely
+View available and booked seats
+Simulate race conditions
+Demonstrate deadlock scenarios
+Handle booking conflicts using custom exceptions
+
+🔄 Workflow
+
+System initializes with a fixed number of seats.
+Users select actions from the menu.
+Booking and cancellation requests are executed using a thread pool.
+Seat booking is synchronized to prevent double booking.
+If a seat is already booked, an exception is thrown.
+Race condition simulation attempts simultaneous booking of the same seat.
+Deadlock simulation intentionally locks resources in reverse order to demonstrate thread blocking.
+ExecutorService manages concurrent task execution.
+
+🛠 Concepts Used (One Line Explanation)
+
+Multithreading – Multiple users book seats simultaneously.
+Synchronization (synchronized keyword) – Ensures thread-safe booking and cancellation.
+ExecutorService & Thread Pool – Manages concurrent task execution efficiently.
+ConcurrentHashMap – Thread-safe storage of booked seats.
+Custom Exception – SeatNotAvailableException handles booking conflicts.
+Race Condition Simulation – Demonstrates concurrent seat booking conflict.
+Deadlock Simulation – Shows how improper lock ordering can block threads.
+Object Locking – Uses intrinsic locks to control resource access.
+Menu-Driven System – Switch-case with continuous loop for interaction.
+```
+
+## Payroll Management
+```
+📌 Project Description
+
+The Payroll Management System is a console-based Java application that manages employee salary processing and payroll operations.
+It allows:
+Adding full-time and part-time employees
+Viewing, searching, and deleting employees
+Generating employee payslips
+Calculating salary and tax
+Exporting payroll reports to a file
+
+🔄 Workflow
+
+User selects an option from the main menu.
+Admin can add Full-Time or Part-Time employees.
+Employees are stored in a HashMap using unique IDs.
+Salary is calculated differently based on employee type.
+Payslip is generated with gross salary, tax deduction, and net salary.
+Payroll data can be exported to a text file.
+Employees can be searched or removed using ID.
+
+🛠 Concepts Used (One Line Explanation)
+
+Interface (Payable) – Defines contract for salary calculation.
+Abstract Class (Employee) – Provides common properties and behavior.
+Inheritance – FullTimeEmployee and PartTimeEmployee extend Employee.
+Polymorphism – calculateSalary() behaves differently based on employee type.
+Encapsulation – Employee details are protected and accessed via methods.
+Collections (HashMap) – Stores employees using ID as key.
+File Handling (FileWriter) – Exports payroll data to a text file.
+Method Overriding – Salary calculation differs for each employee type.
+Menu-Driven System (Loop + Switch) – Controls application flow.
+Basic Tax Calculation Logic – Applies fixed percentage deduction.
+
+```
