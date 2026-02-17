@@ -70,3 +70,75 @@ ArrayList – Maintains transaction history.
 Control Statements – Switch and loops manage menu-driven interface.
 Basic Security Logic – Account locks after 3 failed login attempts.
 ```
+## Bank Management
+```
+📌 Project Description
+
+The Bank Management System is a simple console-based Java application that allows users to:
+Create a bank account
+View account details
+Deposit money
+Withdraw money
+Manage multiple accounts
+
+🔄 Workflow
+
+User starts the application and sees the main menu.
+User selects Create Account and enters account number and holder name.
+Account is stored in an ArrayList.
+User can View Account details using account number.
+User can Deposit money, which increases the account balance.
+User can Withdraw money if sufficient balance is available.
+If account is not found or balance is insufficient, system shows an error message.
+User exits the system when finished.
+
+🛠 Concepts Used (One Line Explanation)
+
+Class & Object – BankAccount, BankService, and BankApp represent system components.
+Encapsulation – Account details are private and accessed through getters.
+ArrayList – Stores multiple bank accounts dynamically.
+Method Creation – Separate methods for deposit, withdraw, and account search.
+Loop & Switch – Used for menu-driven console interaction.
+Basic Validation Logic – Checks account existence and sufficient balance.
+```
+
+## ECommerce System
+```
+📌 Project Description
+
+The E-Commerce System is a console-based Java application that simulates an Amazon/Flipkart-style platform with Admin and Customer roles.
+
+It allows:
+User registration and login
+Role-based access (Admin / Customer)
+Admin to add and manage products
+Customers to browse and search products
+Add products to cart
+Checkout and place orders
+Order history tracking
+Stock management with exception handling
+
+🔄 Workflow
+
+User registers or logs in.
+System authenticates credentials.
+If Admin → can add and view products.
+If Customer → can browse, search, add to cart, and checkout.
+Products are sorted by rating when displayed.
+During checkout, total amount is calculated.
+If stock is insufficient, custom exception is thrown.
+Order is stored in user order history after successful checkout.
+
+🛠 Concepts Used (One Line Explanation)
+
+Class & Object – Product, User, and ECommerceApp represent system components.
+Encapsulation – Product and User data are controlled using private variables.
+Custom Exception – OutOfStockException handles stock errors.
+Enums – Role and Category improve readability and type safety.
+Collections (HashMap) – Stores users and products efficiently.
+ArrayList – Used for cart and order history storage.
+Streams API – Used for sorting, filtering, and total calculations.
+Comparator – Sorts products by rating (highest first).
+Exception Handling (try-catch) – Manages runtime stock issues.
+Role-Based Access Control – Different menus for Admin and Customer.
+Menu-Driven System (Switch + Loop) – Console interaction logic.
